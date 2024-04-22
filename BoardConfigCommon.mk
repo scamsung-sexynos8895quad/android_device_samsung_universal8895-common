@@ -19,9 +19,6 @@ COMMON_PATH := device/samsung/universal8895-common
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
-# APEX
-OVERRIDE_TARGET_FLATTEN_APEX := true
-
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
@@ -63,9 +60,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
-# Binder
-TARGET_USES_64_BIT_BINDER := true
-
 # Extracted with libbootimg
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
@@ -77,7 +71,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 BOARD_ROOT_EXTRA_FOLDERS += efs cpefs
-BOARD_USES_FULL_RECOVERY_IMAGE := false
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument" \
     KBUILD_BUILD_USER=$(BUILD_USERNAME) KBUILD_BUILD_HOST=$(BUILD_HOSTNAME)

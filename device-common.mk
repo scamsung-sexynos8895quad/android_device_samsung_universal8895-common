@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # APEX
-OVERRIDE_TARGET_FLATTEN_APEX := true
+OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -320,10 +320,6 @@ PRODUCT_COPY_FILES += \
 # s-pen
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/samsung-sec_e-pen.idc:system/usr/idc/sec_e-pen.idc
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
