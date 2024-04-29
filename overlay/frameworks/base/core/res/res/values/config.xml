@@ -267,9 +267,6 @@
     <!-- The device supports freeform window management -->
     <bool name="config_freeformWindowManagement">true</bool>
 
-    <!-- For performance and storage reasons, limit the number of fingerprints per user -->
-    <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
-
     <!-- Idle Receive current for wifi radio. 0 by default-->
     <integer translatable="false" name="config_wifi_idle_receive_cur_ma">1</integer>
 
@@ -307,15 +304,6 @@
     <string-array translatable="false" name="config_gpsParameters">
         <item>LONGTERM_PSDS_SERVER_1=https://glltos1.glpals.com/4day/v5/latest/lto2.dat</item>
         <item>LONGTERM_PSDS_SERVER_2=https://glltos2.glpals.com/4day/v5/latest/lto2.dat</item>
-    </string-array>
-
-    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
-         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
-         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
-         and Strength as defined in Authenticators.java -->
-    <string-array name="config_biometric_sensors" translatable="false">
-        <!-- ID0:Fingerprint:Strong -->
-        <item>0:2:15</item>
     </string-array>
 
     <!-- Specify if the fingerprint hardware support gestures-->
